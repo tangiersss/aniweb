@@ -48,6 +48,15 @@ class _UserScreenState extends State<UserScreen> {
                 fontFamily: 'WorkSans',
                 color: Colors.black),
           ),
+          const Padding(padding: EdgeInsets.only(top: 15)),
+          const Text(
+            'Liked:',
+            style: TextStyle(
+                letterSpacing: 3,
+                fontSize: 16,
+                fontFamily: 'WorkSans',
+                color: Colors.black),
+          ),
           const Padding(padding: EdgeInsets.only(top: 25)),
           Expanded(
               child: ListView.builder(
@@ -55,7 +64,7 @@ class _UserScreenState extends State<UserScreen> {
             itemBuilder: (context, index) {
               return const ListTile(
                 title: Text(
-                  'data',
+                  'Anime',
                   textAlign: TextAlign.center,
                 ),
               );
