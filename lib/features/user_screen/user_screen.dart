@@ -28,9 +28,9 @@ class _UserScreenState extends State<UserScreen> {
           )
         ],
       ),
-      body: const Column(
+      body: Column(
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
@@ -48,6 +48,19 @@ class _UserScreenState extends State<UserScreen> {
                 fontFamily: 'WorkSans',
                 color: Colors.black),
           ),
+          const Padding(padding: EdgeInsets.only(top: 25)),
+          Expanded(
+              child: ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return const ListTile(
+                title: Text(
+                  'data',
+                  textAlign: TextAlign.center,
+                ),
+              );
+            },
+          )),
         ],
       ),
     );
