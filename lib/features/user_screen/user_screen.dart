@@ -27,6 +27,16 @@ class _UserScreenState extends State<UserScreen> {
           )
         ],
       ),
+      body: const Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.person,
+            size: 150,
+            color: Colors.blue,
+          ),
+        ],
+      ),
     );
   }
 }
