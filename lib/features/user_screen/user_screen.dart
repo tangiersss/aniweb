@@ -1,3 +1,4 @@
+import 'package:anime_tracker/features/anime_list_screen/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class UserScreen extends StatefulWidget {
@@ -27,13 +28,25 @@ class _UserScreenState extends State<UserScreen> {
           )
         ],
       ),
-      body: const Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: const Column(
         children: [
-          Icon(
-            Icons.person,
-            size: 150,
-            color: Colors.blue,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.person,
+                size: 150,
+                color: Colors.blue,
+              ),
+            ],
+          ),
+          const Text(
+            'Username',
+            style: TextStyle(
+                letterSpacing: 3,
+                fontSize: 22,
+                fontFamily: 'WorkSans',
+                color: Colors.black),
           ),
         ],
       ),
