@@ -1,15 +1,11 @@
-import 'package:anime_tracker/features/user_screen/user_screen.dart';
+import 'package:anime_tracker/features/screens/user_screen/user_screen.dart';
 import 'package:flutter/material.dart';
-import '../features/anime_list_screen/anime_list_screen.dart';
-import '../features/review_screen/review_screen.dart';
+import '../features/screens/anime_list_screen/anime_list_screen.dart';
+import '../features/screens/review_screen/review_screen.dart';
 import '../models/anime.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case '/':
-      return MaterialPageRoute(
-        builder: (context) => const AnimeListScreen(),
-      );
     case '/user':
       return MaterialPageRoute(
         builder: (context) => const UserScreen(),

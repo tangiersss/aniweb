@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../models/anime.dart';
+import '../../../../models/anime.dart';
 
 class AnimeCard extends StatelessWidget {
   final Anime anime;

@@ -1,4 +1,5 @@
-import 'package:anime_tracker/features/anime_list_screen/widgets/widgets.dart';
+import 'package:anime_tracker/features/authentication/auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class UserScreen extends StatefulWidget {
@@ -70,6 +71,18 @@ class _UserScreenState extends State<UserScreen> {
               );
             },
           )),
+          ElevatedButton(
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (_) => const AuthGate()),
+                (route) => false,
+              );
+            },
+            child: const Text('Выйти'),
+          )
         ],
       ),
     );
